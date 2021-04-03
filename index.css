@@ -12,33 +12,36 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
     padding: 0.5em 2em;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     background-color: bisque;
     color: peru;
-    box-shadow: 0 3px 10px black;
+    box-shadow: 0 0 10px 3px black;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 .cabecalho img {
-    margin: 0 0.8em;
+    margin: 0.5em 1em;
 }
 .cabecalho .titulo {
     display: flex;
     align-items: center;
-    text-shadow: 0 1px 2px black;
+    text-shadow: 1px 1px 3px black;
 }
 .cabecalho .contato {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    align-items: flex-end;
     text-align: right;
+    margin-left: auto;
+}
+.cabecalho .contato img {
+    margin: 0.5em 0.5em 0 0.5em;
 }
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     color: #4d4b4b;
 }
@@ -46,28 +49,37 @@ body {
     background-image: url(assets/notebook.png);
     background-repeat: round;
     background-size: fill;
-    padding: 3em 5em;
+    margin: 0.5em 0;
 }
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 300px;
+    min-height: 400px;
+    margin: 2em 2em 2em 6.1em;
 }
 .card img {
-    box-shadow: 2px 2px 8px 4px black;
+    box-shadow: 2px 2px 8px 2px black;
     border-radius: 1em;
     margin-bottom: 1em;
 }
+.card h1 {
+    text-align: center;
+}
 .card h2 {
+    text-align: center;
     border-bottom: 1px solid black;
     margin: 1em;
 }
+.card h3 {
+    margin: 0.5em;
+}
 .card p {
-    margin-left: 2em;
+    text-align: center;
 }
 .card li {
-    margin-left: 4em;
+    margin-left: 1.5em;
 }
 .divisoria {
     background-image: url(assets/fox-tail.png);
@@ -83,10 +95,10 @@ body {
     align-items: center;
     width: 100%;
     padding: 1em;
-    margin-top: 4em;
+    margin-top: 3em;
     background-color: bisque;
     color: peru;
-    box-shadow: 3px 0 10px black;
+    box-shadow: 0 0 10px 3px black;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
