@@ -4,113 +4,159 @@
     padding: 0;
     font-family: 'Sawarabi Gothic', sans-serif;
 }
+
 body {
-    background-image: url(assets/background.jpg);
+    background-image: url(images/background.jpg);
     background-repeat: repeat;
+    color: var(--brown-800);
 }
-.cabecalho {
+
+:root {
+    --brown-50: rgb(241, 216, 184);
+    --brown-800: #452d2d;
+    --orange-200: rgba(255, 166, 0, 0.836);
+    --orange-500: peru;
+    --black: #000;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0.5em 2em;
-    margin-bottom: 3em;
-    background-color: bisque;
-    color: peru;
-    box-shadow: 0 0 10px 3px black;
+    padding: 0.5rem 2rem;
+    margin-bottom: 3rem;
+    background-color: var(--brown-50);
+    box-shadow: 1px 0 8px 2px var(--brown-800);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-.cabecalho img {
-    margin: 0.5em 1em;
-}
-.cabecalho .titulo {
-    display: flex;
+
+.header__title {
     align-items: center;
-    text-shadow: 1px 1px 3px black;
-}
-.cabecalho .contato {
     display: flex;
+    position: relative;
+    text-shadow: 0.5px 0.5px 2px var(--black);
+}
+
+.header__title img {
+    position: absolute;
+    top: -0.7rem;
+    left: -1.1rem;
+    width: 40px;
+}
+
+.header__contact {
     align-items: flex-end;
-    text-align: right;
-    margin-left: auto;
-}
-.cabecalho .contato img {
-    margin: 0.5em 0.5em 0 0.5em;
-}
-.container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    color: #4d4b4b;
-}
-.notebook {
-    background-image: url(assets/notebook.png);
-    background-repeat: round;
-    background-size: fill;
-    margin: 0.5em 0;
-}
-.card {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    text-align: right;
+}
+
+.header__contact img {
+    width: 30px;
+}
+
+@media (max-width: 720px) {
+    .header__contact {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .header__contact img {
+        margin-left: 0.5rem;
+    }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.notebook {
+    background-image: url(images/notebook.png);
+    background-repeat: round;
+    background-size: fill;
+    margin: 0.5rem 0;
+}
+
+.card {
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 2rem 2rem 6.1rem;
     max-width: 300px;
     min-height: 400px;
-    margin: 2em 2em 2em 6.1em;
 }
+
 .card img {
-    box-shadow: 2px 2px 8px 2px black;
-    border-radius: 1em;
-    margin-bottom: 1em;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 8px 2px var(--black);
+    margin-bottom: 1rem;
 }
+
 .card h1 {
     text-align: center;
 }
+
 .card h2 {
+    border-bottom: 1px solid var(--black);
+    margin: 1rem;
     text-align: center;
-    border-bottom: 1px solid black;
-    margin: 1em;
 }
+
 .card h3 {
-    margin: 0.5em;
+    margin: 0.5rem;
 }
+
 .card p {
     text-align: center;
 }
+
 .card li {
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
 }
+
 .divisoria {
-    background-image: url(assets/fox-tail.png);
+    background-image: url(images/fox-tail.png);
     background-position: left;
     background-repeat: repeat-x;
     background-size: contain;
-    height: 80px;
-    margin: 2em 0;
+    height: 50px;
+    margin: 2rem 0;
 }
-.rodape {
+
+footer {
+    align-items: center;
+    background-color: var(--brown-50);
     display: flex;
     justify-content: center;
-    align-items: center;
+    text-align: center;
     width: 100%;
-    padding: 1em;
-    margin-top: 3em;
-    background-color: bisque;
-    color: peru;
-    box-shadow: 0 0 10px 3px black;
+    padding: 1rem;
+    margin-top: 3rem;
+    color: var(--brown-800);
+    box-shadow: -1px 0 8px 2px var(--brown-800);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-.rodape img {
-    margin-right: 0.2em;
+
+footer img {
+    margin-left: 0.2rem;
 }
-.rodape a {
+
+footer a {
+    color: var(--orange-500);
     text-decoration: none;
-    margin: 0.4em;
-    color: peru;;
 }
-.rodape a:hover {
+
+footer a:hover {
+    color: var(--orange-200);
     text-decoration: underline;
-    color: rgba(255, 166, 0, 0.836);
 }
